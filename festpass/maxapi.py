@@ -1,4 +1,4 @@
-"""Тонкий клиент MAX Bot API (platform-api.max.ru).
+"""Тонкий клиент MAX Bot API (platform-api2.max.ru).
 
 Берем только то, что нужно фестивалю: long polling, отправку
 сообщений, ответ на нажатие кнопки и проверку участника канала.
@@ -16,7 +16,7 @@ import httpx
 
 log = logging.getLogger(__name__)
 
-API_URL = "https://platform-api.max.ru"
+API_URL = "https://platform-api2.max.ru"
 UPDATE_TYPES = "bot_started,message_created,message_callback"
 
 
