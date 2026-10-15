@@ -1,0 +1,13 @@
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+
+# рабочие данные: база, выгрузки, секреты, реальные коды партнеров
+*.db
+*.db-wal
+*.db-shm
+exports/
+codes/
+.env
+lineup.toml
