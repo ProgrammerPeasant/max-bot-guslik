@@ -148,6 +148,11 @@ def load_lineup(path: str | Path) -> Lineup:
     days = [a.day for a in acts]
     if len(set(days)) != len(days):
         raise ConfigError("в один день на сцене может быть только один партнер")
+    for act in acts:
+        if act.promo_until < act.day:
+            raise ConfigError(f"{act.partner}: промокод истекает раньше, чем выдается")
+    if final.winners < 1:
+        raise ConfigError("в финале должен быть хотя бы один победитель")
     return lineup
 
 
