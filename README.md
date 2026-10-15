@@ -59,6 +59,16 @@ export MAX_BOT_TOKEN=...             # токен бота из кабинета
 Для проверки подписки бот должен быть **администратором канала каждого партнера**: MAX отдает
 список участников канала только админам. `channel_id` в афише это id канала в MAX.
 
+## Docker
+
+```sh
+docker build -t festpass .
+docker run -d --name festpass -e MAX_BOT_TOKEN=... -v $PWD/data:/data festpass
+docker exec festpass festbot stats
+```
+
+В `data/` должен лежать `lineup.toml`, там же появится база.
+
 ## День оператора
 
 ```sh
